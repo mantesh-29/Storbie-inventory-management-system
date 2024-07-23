@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="Stylesheet" href="home.css">
+</head>    
+<body>
+    
+    <header>
+        <div class="logo">
+            <h2><img src="handshake1.svg" alt="logo" width="40px">Storbie</h2>
+        </div>     
+        <div class="Menu_bar">
+            <a href="home.html">Home</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="About.html">About</a>
+            <a href="#Footer_section">Contact</a>
+        </div>    
+    </header>    
+    
+    <section class="inventory">
+        <div class="inventory">
+        <h1>Inventory</h1>
+        <div class="Container_1">
+            <div class="tasks">
+                <h3>Track Inventory</h3>
+                <p>Check your products details from here </p>
+ 
+                <button><a href="#viewInventory">View</a></button>
+            </div>
+            <div class="tasks">  
+                <h3>Update Inventory</h3>
+                <p>Update product details and quantity from here</p>
+                <button><a href="#Update_inventory">Update</a></button>
+            </div>
+            <div class="tasks"> 
+                <h3>Add New Product</h3> 
+                <p> Add some new products and their details from here</p>
+                <button><a href="#Product_id">Add</a></button>
+            </div>
+        </div>  
+  </section>
+      
+  
+    
+  <section class="track_inventory" id="viewInventory">
+    <div class="heading"> <h1>Inventory status</h1>  </div> 
+        
+        
+       <div class="combined">
+   
+           <div title="Track" id="Track">
+               <h2>Products</h2>
+               <div class="Track_Container">
+                   <div class="Track_Container_1">
+                       <button onclick="sortProducts('name')">Sort by Name</button>
+                       <button onclick="sortProducts('quantity')">Sort by Quantity</button>
+                       <button onclick="sortProducts('expirydate')">Sort by Date</button>
+                   </div>
+                   <div class="Track_Container_1">
+                       <button onclick="filterExpiringProducts()">Show Expiring Products</button>
+                       <button onclick="resetFilter()">Reset Filter</button>
+                   </div>
+               </div>
+           </div>
+           
+           <div class="Table_product">
+               <table>
+                   <thead>
+                       <tr>
+                           <th>NAME</th>
+                           <th>QUANTITY</th>
+                           <th>EXPITY DATE</th>
+                           <th>ACTIONS</th>
+                       </tr>
+                   </thead>
+                   <tbody id="Product_Table">
+                       <!-- Products will be injected here by JavaScript -->
+                   </tbody>
+               </table>
+           </div>
+           
+       </div> 
+       
+       
+       <div id="message"></div>
+       <div id="warningMessage"></div>
+       
+       
+       
+     </section>
+           
+           
+     <section id="Update_inventory">     
+       <div class="Update_Container">
+           <h2>Add or Update Products</h2>
+           <form id="Product_form">
+             <input type="hidden" id="Product_id">
+             <div>
+               <div>
+                 <label for="Product_name">Product Name</label>
+                 <input id="Product_name" type="text">
+               </div>
+               <div>
+                 <label for="Product_quantity">Quantity: </label>
+                 <input id="Product_quantity" type="number">
+               </div>
+               <div>
+                 <label for="Expiry_Date">Date of Expiry</label>
+                 <input id="Expiry_Date" type="date">
+               </div>
+               <div>
+                 <button type="submit">Save Product</button>
+               </div>
+             </div>
+           </form> 
+       </div>
+     </section>
+   
+   
+<footer>
+    <div class="Footer_section" id="Footer_section">
+        <h2>Storbie</h2>
+        
+        <div class="footer_part">
+            <div class="footer_detail">
+                <h3>Contact</h3>
+                <p>29mjaiswal@gmail.com</p>
+                <p>123-456-7890</p>
+            </div>
+            
+            <div class="footer_detail">
+                <h3>Location</h3>
+                <p>Anpara,sonbhadra</p>
+                <p>231225, U.P., India</p>
+            </div>
+            <div class="footer_detail">
+                <h3>Follow</h3>
+                <div class="social_media">
+                    <a href="#" target="_blank"><img src="whatsapp1.svg"></a>
+                    <a href="#" target="_blank"><img src="github.svg"></a>
+                    <a href="#" target="_blank"><img src="facebook.svg"></a>
+                    <a href="#" target="_blank"><img src="instagram.svg"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+ </footer>
+ <script src="home.js"></script>       
+</body>
+</html>
